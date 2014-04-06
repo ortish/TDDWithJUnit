@@ -45,4 +45,8 @@ public class Car {
 		return("Color: " + this.color + ", Speed: " + this.speed);
 	}
 
+
+		
+	}
+
 }
