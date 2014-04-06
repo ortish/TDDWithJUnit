@@ -31,15 +31,17 @@ public class CarTest {
 		assertThat(car1.toString(), is("Color: Red, Speed: 0"));
 	}
 	
+	@Test
 	public void canDecelerate(){
 		Car car1 = new Car("Red", 100);
 		car1.decelerate(10);
-		assertThat(car1.getSpeed(), is(-10));
+		assertThat(car1.getSpeed(), is(10));
 	}
 	
+	@Test
 	public void cannotDecelerateBelowZero(){
 		Car car1 = new Car("Red", 100);
-		car1.decelerate(1);
+		car1.decelerate(-1);
 		assertThat(car1.getSpeed(), is(0));
 	}
 	
